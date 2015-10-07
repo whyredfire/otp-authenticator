@@ -5,13 +5,13 @@ Two- and Multi- Factor Authenication (2FA / MFA) for node.js
 
 There are a number of apps that various websites use to give you 6-digit codes to increase security when you log in:
 
-* Authy [iPhone](https://itunes.apple.com/us/app/authy/id494168017?mt=8) [Android](https://play.google.com/store/apps/details?id=com.authy.authy&hl=en) [Chrome](https://chrome.google.com/webstore/detail/authy/gaedmjdfmmahhbjefcbgaolhhanlaolb?hl=en) [Linux](https://www.authy.com/personal/) [OS X](https://www.authy.com/personal/) [BlackBerry](https://appworld.blackberry.com/webstore/content/38831914/?countrycode=US&lang=en)
-* Google Authenticator [iPhone](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8) [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
-* Microsoft Authenticator [Windows Phone](https://www.microsoft.com/en-us/store/apps/authenticator/9wzdncrfj3rj) [Android](https://play.google.com/store/apps/details?id=com.microsoft.msa.authenticator) [iPhone]()
+* Authy [iPhone](https://itunes.apple.com/us/app/authy/id494168017?mt=8) • [Android](https://play.google.com/store/apps/details?id=com.authy.authy&hl=en) • [Chrome](https://chrome.google.com/webstore/detail/authy/gaedmjdfmmahhbjefcbgaolhhanlaolb?hl=en) • [Linux](https://www.authy.com/personal/) • [OS X](https://www.authy.com/personal/) • [BlackBerry](https://appworld.blackberry.com/webstore/content/38831914/?countrycode=US&lang=en)
+* Google Authenticator [iPhone](https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8) • [Android](https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en)
+* Microsoft Authenticator [Windows Phone](https://www.microsoft.com/en-us/store/apps/authenticator/9wzdncrfj3rj) • [Android](https://play.google.com/store/apps/details?id=com.microsoft.msa.authenticator) [iPhone]()
 * GAuth [FxOS](https://marketplace.firefox.com/app/gauth/)
 
 There are many [Services that Support MFA](http://lifehacker.com/5938565/heres-everywhere-you-should-enable-two-factor-authentication-right-now),
-including Google, Microsoft, Facebook, Digital Ocean, for starters.
+including Google, Microsoft, Facebook, and Digital Ocean for starters.
 
 This module uses [`notp`](https://github.com/guyht/notp) which implements `TOTP` [(RFC 6238)](https://www.ietf.org/rfc/rfc6238.txt)
 (the *Authenticator* standard), which is based on `HOTP` [(RFC 4226)](https://www.ietf.org/rfc/rfc4226.txt)
@@ -42,10 +42,12 @@ authenticator.verifyToken(formattedKey, '000 000');
 // null
 ```
 
-QRCode
-------
+QR Code
+-------
 
-See <https://davidshimjs.github.io/qrcodejs/>
+See <https://davidshimjs.github.io/qrcodejs/> and <https://github.com/soldair/node-qrcode>.
+
+Example use with `qrcode.js` in the browser:
 
 ```javascript
 'use strict';
