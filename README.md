@@ -44,15 +44,15 @@ authenticator.verifyToken(formattedKey, '000 000');
 
 ### API
 
-### `generateKey()`
+### generateKey()
 
 generates a 32-character (160-bit) base32 key
 
-### `generateToken(formattedKey)`
+### generateToken(formattedKey)
 
 generates a 6-digit (20-bit) decimal time-based token
 
-### `verifyToken(formattedKey, formattedToken)`
+### verifyToken(formattedKey, formattedToken)
 
 validates a time-based token within a +/- 30 second (90 seconds) window
 
