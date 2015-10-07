@@ -1,0 +1,36 @@
+{
+  "name": "authenticator",
+  "version": "1.0.0",
+  "description": "Two- / Multi- Factor Authenication (2FA / MFA) for node.js",
+  "main": "authenticator.js",
+  "scripts": {
+    "test": "node example.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daplie/node-authenticator.git"
+  },
+  "keywords": [
+    "authenticator",
+    "2fa",
+    "mfa",
+    "token",
+    "key",
+    "base32",
+    "code",
+    "generator",
+    "authy",
+    "google",
+    "microsoft"
+  ],
+  "author": "AJ ONeal <coolaj86@gmail.com> (http://coolaj86.com/)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Daplie/node-authenticator/issues"
+  },
+  "homepage": "https://github.com/Daplie/node-authenticator#readme",
+  "dependencies": {
+    "notp": "^2.0.3",
+    "thirty-two": "0.0.2"
+  }
+}
