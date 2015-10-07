@@ -42,6 +42,13 @@ authenticator.verifyToken(formattedKey, '000 000');
 // null
 ```
 
+### API
+
+* `generateKey()` generates a 32-character (160-bit) base32 key
+* `generateToken(formattedKey)` generates a 6-digit (20-bit) decimal time-based token
+* `verifyToken(formattedKey, formattedToken)` validates a time-based token within a +/- 30 second (90 seconds) window
+  * returns `null` on failure or an object such as `{ delta: 0 }` on success
+
 QR Code
 -------
 
