@@ -65,6 +65,8 @@ QR Code
 
 See <https://davidshimjs.github.io/qrcodejs/> and <https://github.com/soldair/node-qrcode>.
 
+![](http://cdn9.howtogeek.com/wp-content/uploads/2014/10/sshot-7-22.png)
+
 Example use with `qrcode.js` in the browser:
 
 ```javascript
