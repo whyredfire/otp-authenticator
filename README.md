@@ -19,6 +19,11 @@ This module uses [`notp`](https://github.com/guyht/notp) which implements `TOTP`
 (the *Authenticator* standard), which is based on `HOTP` [(RFC 4226)](https://www.ietf.org/rfc/rfc4226.txt)
 to provide codes that are exactly compatible with all other *Authenticator* apps and services that use them.
 
+Browser Authenticator
+---------------------
+
+You may also be interested in [Browser Authenticator](https://github.com/Daplie/browser-authenticator) over at <https://github.com/Daplie/browser-authenticator>
+
 Usage
 =====
 
