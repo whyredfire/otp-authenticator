@@ -117,13 +117,4 @@ and humans who are handicapped or otherwise struggle with quick fine motor skill
 Why not SpeakEasy?
 ------------------
 
-I took a look at the code and I didn't feel comfortable using it.
-
-For any module related to security I want to see that the code is clean,
-well-maintained, and that any security-related bugs are addressed.
-
-The author was obviously not well-versed in JavaScript at the time
-that he wrote it and it hasn't been cleaned up since.
-Also, the author hasn't been responsive to issues and pull requests.
-
-The notp author has been responsive, but notp doesn't do everything I would like.
+It doesn't use native node crypto and there are open security issues which have been left unaddressed.
