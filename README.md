@@ -24,13 +24,6 @@ Browser Authenticator
 
 You may also be interested in [Browser Authenticator](https://github.com/Daplie/browser-authenticator) over at <https://github.com/Daplie/browser-authenticator>
 
-OTPAuth Scheme
---------------
-
-* <https://github.com/google/google-authenticator/wiki/Key-Uri-Format>
-* `otpauth://totp/<<ISSUER>>:<<ACCOUNT_NAME>>?secret=<<BASE32_KEY>>&issuer=<<ISSUER>>`
-* `otpauth://totp/<<ISSUER>>:<<ACCOUNT_NAME>>?secret=<<BASE32_KEY>>&issuer=<<ISSUER>>&algorithm=<<ALGO>>&digits=<<INT>>&period=<<SECONDS>>`
-
 Usage
 =====
 
@@ -56,7 +49,15 @@ authenticator.verifyToken(formattedKey, '000 000');
 // null
 ```
 
-### API
+OTPAuth Scheme
+--------------
+
+* <https://github.com/google/google-authenticator/wiki/Key-Uri-Format>
+* `otpauth://totp/<<ISSUER>>:<<ACCOUNT_NAME>>?secret=<<BASE32_KEY>>&issuer=<<ISSUER>>`
+* `otpauth://totp/<<ISSUER>>:<<ACCOUNT_NAME>>?secret=<<BASE32_KEY>>&issuer=<<ISSUER>>&algorithm=<<ALGO>>&digits=<<INT>>&period=<<SECONDS>>`
+
+API
+---
 
 ### generateKey()
 
