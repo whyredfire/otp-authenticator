@@ -47,14 +47,11 @@ authenticator.verifyToken(formattedKey, formattedToken);
 
 authenticator.verifyToken(formattedKey, '000 000');
 // null
+
+authenticator.generateTotpUri(formattedKey, "john.doe@email.com", "ACME Co", 'SHA1', 6, 30);
+//
+// otpauth://totp/ACME%20Co:john.doe@email.com?secret=HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ&issuer=ACME%20Co&algorithm=SHA1&digits=6&period=30
 ```
-
-OTPAuth Scheme
---------------
-
-* <https://github.com/google/google-authenticator/wiki/Key-Uri-Format>
-* `otpauth://totp/<<ISSUER>>:<<ACCOUNT_NAME>>?secret=<<BASE32_KEY>>&issuer=<<ISSUER>>`
-* `otpauth://totp/<<ISSUER>>:<<ACCOUNT_NAME>>?secret=<<BASE32_KEY>>&issuer=<<ISSUER>>&algorithm=<<ALGO>>&digits=<<INT>>&period=<<SECONDS>>`
 
 API
 ---
@@ -72,6 +69,18 @@ generates a 6-digit (20-bit) decimal time-based token
 validates a time-based token within a +/- 30 second (90 seconds) window
 
 returns `null` on failure or an object such as `{ delta: 0 }` on success
+
+### generateTotpUri(formattedKey, accountName, issuer, algorithm, digits, period)
+
+generates an `OTPAUTH://` scheme URI for QR Code generation.
+
+**OTPAuth Scheme**
+
+* <https://github.com/google/google-authenticator/wiki/Key-Uri-Format>
+* `otpauth://totp/<<ISSUER>>:<<ACCOUNT_NAME>>?secret=<<BASE32_KEY>>&issuer=<<ISSUER>>`
+* `otpauth://totp/<<ISSUER>>:<<ACCOUNT_NAME>>?secret=<<BASE32_KEY>>&issuer=<<ISSUER>>&algorithm=<<ALGO>>&digits=<<INT>>&period=<<SECONDS>>`
+
+Note that `ISSUER` is specified twice for backwards / forwards compatibility.
 
 QR Code
 -------
