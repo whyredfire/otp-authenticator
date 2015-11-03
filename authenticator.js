@@ -57,3 +57,15 @@ function verifyGoogleAuthToken(key, token) {
 module.exports.generateKey = generateGoogleAuthKey;
 module.exports.generateToken = generateGoogleAuthToken;
 module.exports.verifyToken = verifyGoogleAuthToken;
+module.exports.generateTotpUri = function (secret, accountName, issuer, algo, digits, period) {
+  // Full OTPAUTH URI spec as explained at
+  // https://github.com/google/google-authenticator/wiki/Key-Uri-Format
+  return 'otpauth://totp/'
+    + encodeURI(issuer || '') + ':' + encodeURI(accountName || '')
+    + '?secret=' + secret.replace(/[\s\.\_\-]+/g, '').toUpperCase()
+    + '&issuer=' + encodeURIComponent(issuer || '')
+    + '&algorithm=' + (algo || 'SHA1')
+    + '&digits=' + (digits || 6)
+    + '&period=' + (period || 30)
+    ;  
+};
