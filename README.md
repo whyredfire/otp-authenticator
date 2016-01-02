@@ -19,18 +19,31 @@ This module uses [`notp`](https://github.com/guyht/notp) which implements `TOTP`
 (the *Authenticator* standard), which is based on `HOTP` [(RFC 4226)](https://www.ietf.org/rfc/rfc4226.txt)
 to provide codes that are exactly compatible with all other *Authenticator* apps and services that use them.
 
-Browser Authenticator
+Browser & Commandline Authenticator
 ---------------------
 
-You may also be interested in [Browser Authenticator](https://github.com/Daplie/browser-authenticator) over at <https://github.com/Daplie/browser-authenticator>
+You may also be interested in
 
-Usage
+* [Browser Authenticator](https://github.com/Daplie/browser-authenticator) over at <https://github.com/Daplie/browser-authenticator>
+* [Commandline Authenticator](https://github.com/Daplie/authenticator-cli) over at <https://github.com/Daplie/authenticator-cli>
+
+Install
 =====
 
+**node.js api**
 ```bash
 npm install authenticator --save
 ```
 
+**command line**
+```bash
+npm install authenticator-cli --global
+```
+
+Usage
+=====
+
+**node.js api**
 ```javascript
 'use strict';
 
@@ -51,6 +64,15 @@ authenticator.verifyToken(formattedKey, '000 000');
 authenticator.generateTotpUri(formattedKey, "john.doe@email.com", "ACME Co", 'SHA1', 6, 30);
 //
 // otpauth://totp/ACME%20Co:john.doe@email.com?secret=HXDMVJECJJWSRB3HWIZR4IFUGFTMXBOZ&issuer=ACME%20Co&algorithm=SHA1&digits=6&period=30
+```
+
+**command line**
+```
+# see help
+authenticator --help
+
+# generate a key and display qr code
+authenticator --qr
 ```
 
 API
