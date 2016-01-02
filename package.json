@@ -6,6 +6,9 @@
   "scripts": {
     "test": "node example.js"
   },
+  "bin": {
+    "authenticator": "bin/authenticator.js"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Daplie/node-authenticator.git"
@@ -32,6 +35,7 @@
   },
   "homepage": "https://github.com/Daplie/node-authenticator#readme",
   "dependencies": {
+    "authenticator-cli": "^1.0.2",
     "notp": "^2.0.3",
     "thirty-two": "0.0.2"
   }
