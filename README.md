@@ -1,6 +1,8 @@
 Node.js Authenticator
 =====================
 
+| Sponsored by [ppl](https://ppl.family)
+
 Two- and Multi- Factor Authenication (2FA / MFA) for node.js
 
 ![](https://blog.authy.com/assets/posts/authenticator.png)
@@ -24,8 +26,8 @@ Browser & Commandline Authenticator
 
 You may also be interested in
 
-* [Browser Authenticator](https://github.com/Daplie/browser-authenticator) over at <https://github.com/Daplie/browser-authenticator>
-* [Commandline Authenticator](https://github.com/Daplie/authenticator-cli) over at <https://github.com/Daplie/authenticator-cli>
+* [Browser Authenticator](https://git.coolaj86.com/coolaj86/browser-authenticator) over at <https://git.coolaj86.com/coolaj86/browser-authenticator>
+* [Commandline Authenticator](https://git.coolaj86.com/coolaj86/authenticator-cli) over at <https://git.coolaj86.com/coolaj86/authenticator-cli>
 
 Install
 =====
