@@ -35,7 +35,7 @@
   },
   "homepage": "https://git.coolaj86.com/coolaj86/node-authenticator.js#readme",
   "dependencies": {
-    "authenticator-cli": "^1.0.3",
+    "authenticator-cli": "^1.0.5",
     "notp": "^2.0.3",
     "thirty-two": "0.0.2"
   }
