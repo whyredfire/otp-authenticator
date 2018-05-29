@@ -1,6 +1,6 @@
 {
   "name": "authenticator",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Two- / Multi- Factor Authenication (2FA / MFA) for node.js",
   "main": "authenticator.js",
   "scripts": {
