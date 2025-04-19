@@ -1,6 +1,6 @@
-'use strict';
+"use strict";
 
-var authenticator = require('./authenticator');
+var authenticator = require("./authenticator");
 
 var formattedKey = authenticator.generateKey();
 console.log(formattedKey);
@@ -14,7 +14,7 @@ var result = authenticator.verifyToken(formattedKey, formattedToken);
 console.log(result);
 // { delta: 0 }
 
-result = authenticator.verifyToken(formattedKey, '000-000');
+result = authenticator.verifyToken(formattedKey, "000-000");
 console.log(result);
 // null
 

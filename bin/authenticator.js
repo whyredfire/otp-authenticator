@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-'use strict';
+"use strict";
 
-module.exports = require('authenticator-cli/bin/authenticator');
+module.exports = require("authenticator-cli/bin/authenticator");
