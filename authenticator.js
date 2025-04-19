@@ -39,22 +39,24 @@ function decodeGoogleAuthKey(key) {
 }
 
 // Generate a Google Auth Token
-function generateGoogleAuthToken(key) {
+function generateGoogleAuthToken(key, period = 30) {
   var bin = decodeGoogleAuthKey(key);
   var notp = require("notp");
 
-  return notp.totp.gen(bin);
+  return notp.totp.gen(bin, {
+    time: period,
+  });
 }
 
 // Verify a Google Auth Token
-function verifyGoogleAuthToken(key, token) {
+function verifyGoogleAuthToken(key, token, period = 30) {
   var bin = decodeGoogleAuthKey(key);
   var notp = require("notp");
 
   token = token.replace(/\W+/g, "");
 
   // window is +/- 1 period of 30 seconds
-  return notp.totp.verify(token, bin, { window: 1, time: 30 });
+  return notp.totp.verify(token, bin, { window: 1, time: period });
 }
 
 module.exports.generateKey = generateGoogleAuthKey;
