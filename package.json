@@ -1,18 +1,11 @@
 {
   "name": "authenticator",
-  "version": "1.1.5",
-  "description": "Two- / Multi- Factor Authenication (2FA / MFA) for node.js",
-  "main": "authenticator.js",
+  "version": "1.1.6",
+  "description": "Two- / Multi- Factor Authenication (2FA / MFA) for node",
+  "main": "authenticator.ts",
   "type": "module",
   "scripts": {
-    "test": "node example.js"
-  },
-  "bin": {
-    "authenticator": "bin/authenticator.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://git.coolaj86.com/coolaj86/node-authenticator.js.git"
+    "test": "node example.ts"
   },
   "keywords": [
     "authenticator",
@@ -31,10 +24,6 @@
   ],
   "author": "AJ ONeal <coolaj86@gmail.com> (https://coolaj86.com/)",
   "license": "(MIT or Apache-2.0)",
-  "bugs": {
-    "url": "https://git.coolaj86.com/coolaj86/node-authenticator.js/issues"
-  },
-  "homepage": "https://git.coolaj86.com/coolaj86/node-authenticator.js#readme",
   "dependencies": {
     "hi-base32": "^0.5.1",
     "notp": "^2.0.3"
