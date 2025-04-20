@@ -1,8 +1,8 @@
 {
-  "name": "authenticator",
-  "version": "1.1.6",
-  "description": "Two- / Multi- Factor Authenication (2FA / MFA) for node",
-  "main": "authenticator.ts",
+  "name": "otp-authenticator",
+  "version": "2",
+  "description": "Two- / Multi- Factor Authenication (2FA / MFA)",
+  "main": "otp-authenticator",
   "type": "module",
   "scripts": {
     "test": "node example.ts"
@@ -21,6 +21,18 @@
     "authy",
     "google",
     "microsoft"
+  ],
+  "contributors": [
+    {
+      "name": "AJ ONeal",
+      "email": "coolaj86@gmail.com",
+      "url": "https://coolaj86.com"
+    },
+    {
+      "name": "Hridaya Prajapati",
+      "email": "info.hridayaprajapati@gmail.com",
+      "url": "https://hridaya01.com.np"
+    }
   ],
   "author": "AJ ONeal <coolaj86@gmail.com> (https://coolaj86.com/)",
   "license": "(MIT or Apache-2.0)",
