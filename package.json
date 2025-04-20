@@ -3,6 +3,7 @@
   "version": "1.1.5",
   "description": "Two- / Multi- Factor Authenication (2FA / MFA) for node.js",
   "main": "authenticator.js",
+  "type": "module",
   "scripts": {
     "test": "node example.js"
   },
@@ -35,8 +36,15 @@
   },
   "homepage": "https://git.coolaj86.com/coolaj86/node-authenticator.js#readme",
   "dependencies": {
-    "authenticator-cli": "^1.0.5",
-    "notp": "^2.0.3",
-    "thirty-two": "0.0.2"
+    "hi-base32": "^0.5.1",
+    "notp": "^2.0.3"
+  },
+  "private": true,
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.1",
+    "@types/notp": "^2.0.5"
   }
 }

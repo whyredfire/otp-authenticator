@@ -1,6 +1,4 @@
-"use strict";
-
-var authenticator = require("./authenticator");
+import * as authenticator from "./authenticator";
 
 var formattedKey = authenticator.generateKey();
 console.log(formattedKey);
