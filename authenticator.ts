@@ -32,7 +32,7 @@ function generateKey(): string {
 // Binary-decode the key from base32 (Google Authenticator)
 function decodeGoogleAuthKey(key: string): Buffer {
   // Decode base32 Google Auth key to binary
-  const unformatted = key.replace(/\W+/g, "").toUpperCase();
+  const unformatted = key.replace(/[^A-Z2-7=]/gi, "").toUpperCase();
   return Buffer.from(b32.decode.asBytes(unformatted));
 }
 
