@@ -1,8 +1,8 @@
 {
-  "name": "otp-authenticator",
+  "name": "authenticator",
   "version": "2",
   "description": "Two- / Multi- Factor Authenication (2FA / MFA)",
-  "main": "otp-authenticator",
+  "main": "authenticator.ts",
   "type": "module",
   "scripts": {
     "test": "node example.ts"
